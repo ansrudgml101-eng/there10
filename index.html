@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101b31" />
+  <meta name="description" content="문경희의 업무 포트폴리오입니다." />
+  <title>문경희 | Personal Portfolio</title>
+  <style>
+    :root{color-scheme:light;--navy:#101b31;--navy-2:#172743;--ink:#18263c;--muted:#64748b;--line:#e4e9f0;--sky:#eef5fa;--blue:#3569ad;--white:#fff;--shadow:0 22px 70px rgba(26,47,76,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f8fafc;color:var(--ink);font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid #78adf4;outline-offset:4px}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    .site-header{position:absolute;z-index:5;top:0;left:0;width:100%;color:#fff}.nav{display:flex;align-items:center;justify-content:space-between;height:88px}.brand{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:800;letter-spacing:-.035em}.brand-icon{width:35px;height:35px;border:1px solid #ffffff66;border-radius:11px;display:grid;place-items:center;font-size:13px;letter-spacing:0}.nav-links{display:flex;gap:32px;font-size:14px;color:#d7e2f0}.nav-links a{transition:color .2s}.nav-links a:hover{color:#fff}
+    .hero{min-height:660px;background:radial-gradient(circle at 84% 25%,#294667 0,transparent 30%),radial-gradient(circle at 68% 90%,#203c5f 0,transparent 37%),linear-gradient(130deg,#0d182b,#13243e 76%);color:#fff;position:relative;overflow:hidden;display:flex;align-items:center}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.24;background-image:linear-gradient(#ffffff0e 1px,transparent 1px),linear-gradient(90deg,#ffffff0e 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent 25%,#000 100%)}.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding-top:94px;padding-bottom:60px}.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.2em;font-size:12px;font-weight:700;color:#a8c5e9}.eyebrow:before{content:"";width:24px;height:1px;background:#85b9ef}.hero h1{font-size:clamp(42px,5.2vw,70px);letter-spacing:-.065em;line-height:1.19;margin:23px 0 24px;font-weight:800}.hero h1 span{color:#a9c9f2}.hero-desc{color:#bdcadd;font-size:16px;max-width:515px;word-break:keep-all;margin:0 0 36px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;border-radius:10px;padding:0 22px;font-size:14px;font-weight:700;transition:transform .18s,background .18s,box-shadow .18s;cursor:pointer}.btn:hover{transform:translateY(-3px)}.btn-primary{background:#eaf2ff;color:#163358;box-shadow:0 8px 28px #07142933}.btn-primary:hover{background:white}.btn-outline{color:white;border:1px solid #8298b355}.btn-outline:hover{background:#ffffff16}.arrow{font-size:18px;line-height:1}
+    .hero-visual{display:flex;justify-content:center}.orbit{position:relative;width:min(370px,100%);aspect-ratio:1;display:grid;place-items:center}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #ffffff23;border-radius:50%;inset:0}.orbit:after{inset:35px;border-style:dashed;animation:rotate 60s linear infinite}.profile-card{position:relative;z-index:1;width:76%;aspect-ratio:1;border:1px solid #ffffff35;background:linear-gradient(155deg,#ffffff26,#ffffff0a);backdrop-filter:blur(9px);border-radius:28px;box-shadow:0 22px 80px #020b1e55;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-5deg)}.profile-symbol{font-size:clamp(64px,9vw,104px);font-weight:200;line-height:1;letter-spacing:-.09em;color:#f4f8fe}.profile-line{width:45px;height:2px;background:#93b9e4;margin:26px auto 17px}.profile-caption{font-size:12px;letter-spacing:.21em;color:#b8d0ec}.float-dot{position:absolute;width:11px;height:11px;background:#a9c9f2;border-radius:50%;top:13%;right:16%;box-shadow:0 0 0 9px #a9c9f21a}@keyframes rotate{to{transform:rotate(360deg)}}
+    main{background:linear-gradient(#f7f9fc,#fff)}.section{padding:100px 0}.section-head{margin-bottom:36px}.section-kicker{font-size:12px;letter-spacing:.2em;font-weight:800;color:#527cae;text-transform:uppercase}.section-head h2{margin:10px 0;font-size:clamp(27px,3vw,36px);letter-spacing:-.05em;line-height:1.35}.section-head p{margin:0;color:var(--muted);font-size:15px;word-break:keep-all}.about-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px}.about-card,.details-card,.work-card,.page-card{background:#fff;border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow)}.about-card{padding:39px}.about-card .small{font-size:13px;font-weight:800;color:#527cae;letter-spacing:.08em}.about-card h3{font-size:25px;line-height:1.5;letter-spacing:-.05em;margin:15px 0}.about-card p{margin:0;color:#64748b;font-size:15px;word-break:keep-all}.details-card{padding:25px 32px}.detail-row{display:grid;grid-template-columns:100px 1fr;gap:16px;align-items:center;padding:21px 0;border-bottom:1px solid var(--line);font-size:15px}.detail-row:last-child{border-bottom:0}.detail-row .key{font-size:13px;color:#8492a4}.detail-row .value{font-weight:700}.work-section{padding-top:20px}.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.work-card{padding:30px;box-shadow:none;transition:transform .2s,box-shadow .2s,border-color .2s}.work-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c8d9ed}.work-icon{height:47px;width:47px;border-radius:13px;background:#edf4fc;color:#34649a;display:grid;place-items:center;margin-bottom:24px}.work-icon svg{height:23px;width:23px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}.work-card h3{font-size:18px;letter-spacing:-.04em;margin:0 0 12px}.work-card p{font-size:14px;color:var(--muted);margin:0;word-break:keep-all}
+    .pages-section{padding-top:35px}.page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.page-card{display:block;padding:30px;position:relative;overflow:hidden;box-shadow:none;transition:transform .2s,border-color .2s,box-shadow .2s}.page-card:hover{transform:translateY(-6px);border-color:#a9c5e8;box-shadow:var(--shadow)}.page-number{font-size:46px;font-weight:800;letter-spacing:-.07em;line-height:1;color:#c9d9ee}.page-card h3{font-size:19px;letter-spacing:-.04em;margin:25px 0 6px}.page-card p{font-size:13px;color:var(--muted);margin:0}.page-arrow{position:absolute;right:28px;bottom:27px;width:34px;height:34px;border-radius:50%;background:#eff5fb;display:grid;place-items:center;font-size:18px;color:var(--blue);transition:background .2s,transform .2s}.page-card:hover .page-arrow{background:#dbeafc;transform:translateX(3px)}.note{font-size:13px;color:#8794a5;margin-top:19px}.footer{background:#101b31;color:#bbc9d9;padding:33px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:13px}.footer strong{color:#fff;font-size:15px}.footer p{margin:4px 0 0}.top-link{color:#d8e8f8;padding:7px 0}.top-link:hover{color:#fff}
+    @media(max-width:850px){.hero{min-height:610px}.hero-inner{grid-template-columns:1fr .65fr;gap:15px}.orbit{width:270px}.about-grid{grid-template-columns:1fr}.work-grid{gap:12px}.work-card{padding:23px}.page-card{padding:24px}}@media(max-width:640px){.wrap{width:min(100% - 36px,1120px)}.nav{height:72px}.brand{font-size:16px}.nav-links{gap:17px;font-size:12px}.hero{min-height:auto}.hero-inner{grid-template-columns:1fr;padding-top:142px;padding-bottom:82px}.hero h1{font-size:clamp(39px,11vw,54px)}.hero-desc{font-size:15px}.hero-visual{display:none}.section{padding:70px 0}.about-card{padding:27px}.about-card h3{font-size:22px}.details-card{padding:12px 25px}.detail-row{grid-template-columns:74px 1fr;font-size:14px}.work-section{padding-top:0}.work-grid,.page-grid{grid-template-columns:1fr}.work-card{padding:27px}.work-icon{margin-bottom:14px}.page-card{padding:25px}.page-card h3{margin-top:14px}.pages-section{padding-top:0}.footer-inner{align-items:flex-start}.footer p{font-size:12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="wrap nav" aria-label="주 메뉴">
+      <a class="brand" href="#top" aria-label="문경희 포트폴리오 홈"><span class="brand-icon">MK</span><span>MOON KYUNG HEE</span></a>
+      <div class="nav-links"><a href="#about">소개</a><a href="#work">담당 업무</a><a href="#pages">페이지</a></div>
+    </nav>
+  </header>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">PERSONAL PORTFOLIO</div>
+        <h1 id="hero-title">안녕하세요.<br><span>문경희</span>입니다.</h1>
+        <p class="hero-desc">천안시 세정과에서 세정 일반 업무를 담당하고 있습니다. 정확하고 책임감 있는 업무 처리를 바탕으로, 신뢰할 수 있는 행정 서비스를 위해 노력합니다.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#about">저를 소개합니다 <span class="arrow" aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#pages">연결 페이지 보기 <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true"><div class="orbit"><span class="float-dot"></span><div class="profile-card"><div class="profile-symbol">MK</div><div class="profile-line"></div><div class="profile-caption">PUBLIC SERVICE</div></div></div></div>
+    </div>
+  </section>
+  <main>
+    <section class="section" id="about" aria-labelledby="about-title"><div class="wrap">
+      <div class="section-head"><div class="section-kicker">ABOUT ME</div><h2 id="about-title">소개</h2><p>업무의 기본을 소중히 여기며, 차분하고 성실하게 일합니다.</p></div>
+      <div class="about-grid">
+        <article class="about-card"><div class="small">HELLO, I'M MOON KYUNG HEE</div><h3>꼼꼼한 업무 처리와<br>책임감 있는 자세를 중요하게 생각합니다.</h3><p>천안시 세정과 소속으로 세정 일반 업무를 담당하고 있습니다. 맡은 업무를 정확하게 수행하고, 원활한 소통과 체계적인 업무 관리를 통해 신뢰를 쌓아가고자 합니다.</p></article>
+        <div class="details-card" aria-label="기본 정보"><div class="detail-row"><div class="key">이름</div><div class="value">문경희</div></div><div class="detail-row"><div class="key">소속</div><div class="value">천안시 세정과</div></div><div class="detail-row"><div class="key">담당 업무</div><div class="value">세정 일반 업무</div></div><div class="detail-row"><div class="key">업무 가치</div><div class="value">정확성 · 책임감 · 소통</div></div></div>
+      </div>
+    </div></section>
+    <section class="section work-section" id="work" aria-labelledby="work-title"><div class="wrap">
+      <div class="section-head"><div class="section-kicker">WHAT I DO</div><h2 id="work-title">업무 소개</h2><p>세정 일반 업무를 수행할 때 중요하게 생각하는 세 가지 원칙입니다.</p></div>
+      <div class="work-grid">
+        <article class="work-card"><div class="work-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><h3>정확한 행정 처리</h3><p>업무 내용을 꼼꼼히 확인하고, 절차와 기준을 준수하는 업무 처리를 지향합니다.</p></article>
+        <article class="work-card"><div class="work-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></div><h3>원활한 소통</h3><p>명확하고 친절한 소통을 통해 함께 일하기 좋은 업무 환경을 만들어갑니다.</p></article>
+        <article class="work-card"><div class="work-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div><h3>책임감 있는 업무</h3><p>맡은 일의 시작부터 마무리까지 책임감 있게 수행하는 태도를 지향합니다.</p></article>
+      </div>
+    </div></section>
+    <section class="section pages-section" id="pages" aria-labelledby="pages-title"><div class="wrap">
+      <div class="section-head"><div class="section-kicker">EXPLORE MORE</div><h2 id="pages-title">연결 페이지</h2><p>아래 버튼은 추후 추가할 개별 HTML 페이지로 연결됩니다.</p></div>
+      <div class="page-grid">
+        <a class="page-card" href="1.html" aria-label="1번 페이지 열기"><div class="page-number">01</div><h3>페이지 1</h3><p>1.html · 추후 콘텐츠 추가 예정</p><span class="page-arrow" aria-hidden="true">↗</span></a>
+        <a class="page-card" href="2.html" aria-label="2번 페이지 열기"><div class="page-number">02</div><h3>페이지 2</h3><p>2.html · 추후 콘텐츠 추가 예정</p><span class="page-arrow" aria-hidden="true">↗</span></a>
+        <a class="page-card" href="3.html" aria-label="3번 페이지 열기"><div class="page-number">03</div><h3>페이지 3</h3><p>3.html · 추후 콘텐츠 추가 예정</p><span class="page-arrow" aria-hidden="true">↗</span></a>
+      </div><p class="note">※ 현재 1.html, 2.html, 3.html 파일은 포함되지 않습니다. 같은 폴더에 파일을 추가하면 각 버튼으로 이동할 수 있습니다.</p>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div><strong>문경희 · MOON KYUNG HEE</strong><p>천안시 세정과 | Personal Portfolio</p></div><a href="#top" class="top-link">맨 위로 ↑</a></div></footer>
+</body>
+</html>
